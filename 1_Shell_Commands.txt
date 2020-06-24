@@ -91,7 +91,12 @@ echo hello > output.txt
 ** writes hello in a file called output.txt
 
 echo "hi there" >> output.txt
-** append hi there to output.txt
+** appends hi there to output.txt
+
+[Note, echo takes no standard input, only arguments]
+
+[cat, in the absence of file input, takes standard input]
+
 
 
 command < input.txt
