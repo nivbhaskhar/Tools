@@ -3,6 +3,7 @@
 
 ## Bash  
 * [Shell Commands](1_Shell_Commands.txt)  
+  - [Exercises](1_Exercises_Shell_Commands.txt)  
 
 
 ## Jupyter notebook  
