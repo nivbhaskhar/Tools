@@ -1,0 +1,122 @@
+1) Read man ls and write an ls command that lists files in the following manner
+
+Includes all files, including hidden files
+Sizes are listed in human readable format (e.g. 454M instead of 454279954)
+Files are ordered by recency
+Output is colorized
+A sample output would look like this
+
+ -rw-r--r--   1 user group 1.1M Jan 14 09:53 baz
+ drwxr-xr-x   5 user group  160 Jan 14 09:53 .
+ -rw-r--r--   1 user group  514 Jan 14 06:42 bar
+ -rw-r--r--   1 user group 106M Jan 13 12:12 foo
+ drwx------+ 47 user group 1.5K Jan 12 18:08 ..
+
+
+-t "sorting by time modified (content modified)"
+-G "colorized output"
+-l -h "Sizes in human readable format"
+-a "show hidden files"
+
+-------------------
+ls -t -G -l -a 
+-------------------
+
+
+2) Write bash functions marco and polo that do the following. Whenever you execute marco the current working directory should be saved in some manner, then when you execute polo, no matter what directory you are in, polo should cd you back to the directory where you executed marco. For ease of debugging you can write the code in a file marco.sh and (re)load the definitions to your shell by executing source marco.sh.
+
+------------------------------
+#!/bin/bash
+
+#marco:the current working directory should be saved in some manner
+marco () {
+foo=$(pwd)
+}
+
+#polo: cd's you back to the directory where you executed marco
+polo () {
+cd $foo
+}
+
+-------------------------------
+
+
+
+3) Say you have a command that fails rarely. In order to debug it you need to capture its output but it can be time consuming to get a failure run. Write a bash script that runs the following script until it fails and captures its standard output and error streams to files and prints everything at the end. Bonus points if you can also report how many runs it took for the script to fail.
+
+ #!/usr/bin/env bash
+
+ n=$(( RANDOM % 100 ))
+
+ if [[ n -eq 42 ]]; then
+    echo "Something went wrong"
+    >&2 echo "The error was using magic numbers"
+    exit 1
+ fi
+
+ echo "Everything went according to plan"
+
+----------------------------------
+* Put the above code in a file called 2_3_script_to_be_run.sh
+* Then put the following in a file called 2_3_debug.sh
+
+#!/bin/bash
+
+>tmp_standard_output.txt
+>tmp_error.txt
+errorcode=0
+run_number=0
+
+while [ $errorcode -eq 0 ]
+do
+    run_number=$[$run_number + 1]
+    echo "Run : $run_number" | tee tmp_standard_output.txt tmp_error.txt
+    ./2_3_script_to_be_run.sh >> tmp_standard_output.txt 2>> tmp_error.txt
+    errorcode=$?
+    echo "$run_number run done and error code is $errorcode"
+    
+    echo "*************"
+done
+
+echo "Script failed in $run_number -th run"
+
+* Run ./2_3_debug.sh
+----------------------------------
+
+
+4) As we covered in the lecture find’s -exec can be very powerful for performing operations over the files we are searching for. However, what if we want to do something with all the files, like creating a zip file? As you have seen so far commands will take input from both arguments and STDIN. When piping commands, we are connecting STDOUT to STDIN, but some commands like tar take inputs from arguments. To bridge this disconnect there’s the xargs command which will execute a command using STDIN as arguments. For example ls | xargs rm will delete the files in the current directory.
+
+Your task is to write a command that recursively finds all HTML files in the folder and makes a zip with them. Note that your command should work even if the files have spaces (hint: check -d flag for xargs)
+
+Suppose we have a folder called folder_with_html in current working directory and want to zip all html files in it recursively
+
+---------------
+find ./folder_with_html -name '*.html'|xargs zip -r compressed.zip
+----------------
+
+
+5) (Advanced) Write a command or script to recursively find the most recently modified file in a directory. More generally, can you list all files by recency?
+
+-------------------
+
+#! bin/bash
+
+search () {
+
+    
+    files=$(find . -type f)
+    firstfile=$(find . -type f|head -n 1)
+    for file in "$files"; do
+	if [[ $firstfile -ot $file ]]; then
+	    file="$firstfile"
+	fi
+    done
+    echo "the most recent file is $firstfile"
+   
+
+}
+
+
+--------------------------
+
+
