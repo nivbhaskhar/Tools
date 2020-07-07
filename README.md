@@ -15,7 +15,8 @@
 
 
 ## Keyboard shortcuts
-*[Bash](Bash_keyboard_shortcuts.txt)
+
+* [Bash](Bash_keyboard_shortcuts.txt)
 * [Jupyter notebook](Jupyter_keyboard_shortcuts.ipynb)  
 
 
