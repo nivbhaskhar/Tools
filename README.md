@@ -4,7 +4,7 @@
 ## Visualization
 * Matplotlib basics
   - Pylab interface : [Notebook](Visualization/1_MPL_pylab_basic.ipynb), [Markdown](Visualization/1_MPL_pylab_basic.ipynb)
-  - Object oriented interface : [Notebook](Visualization/1_MPL_oo_basic.ipynb), [Markdown](Visualization/1_MPL_oo_basic.ipynb)
+  - Object oriented interface _TODO_: [Notebook](Visualization/1_MPL_oo_basic.ipynb), [Markdown](Visualization/1_MPL_oo_basic.ipynb)
 
 
 ## Bash    
