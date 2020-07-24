@@ -1,3 +1,0 @@
-Ctrl a : moves cursor to the start of the command
-Ctrl r : enter keyword and it will search through history of shell for prev commands with key word
-Ctrl c : interrupts command/goes to new prompt

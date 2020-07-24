@@ -1,2 +1,0 @@
-Run : 188
-The error was using magic numbers
