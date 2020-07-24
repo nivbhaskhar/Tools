@@ -1,20 +1,19 @@
 # Tools, Tips, Techniques  
 
 
----
 
 
 ## Pandas
 * Creating Pandas objects and accessing data from them : [Notebook](Pandas/Pandas_basic_1.ipynb), [Markdown](Pandas/Pandas_basic_1.md)
 
 
----
+
 
 ## Visualization
 * Matplotlib basics
-  - Pylab interface : [Notebook](Visualization/1_MPL_pylab_basic.ipynb), [Markdown](Visualization/1_MPL_pylab_basic.ipynb)
+  - Pylab interface : [Notebook](Visualization/1_MPL_pylab_basic.ipynb), [Markdown](Visualization/1_MPL_pylab_basic.md)
 
----
+
 
 ## Shell stuff    
 * [Shell Commands](Shell/1_Shell_Commands.txt), [Exercises](Shell/1_Exercises_Shell_Commands.txt)    
@@ -22,19 +21,17 @@
 * [Shell tools and scripting](Shell/2_Shell_Tools_And_Scripting.txt), [Exercises](Shell/2_Exercises_Shell_Tools_And_Scripting.txt), [Scripts for the exercises](Shell/2_Exercises_Shell_Tools_And_Scripting.txt)  
 
 
----
 
 ## Software engineering practices  
 * [Unit tests](SoftwareEngineering/UnitTests.pdf)  
 
 
----
 
 ## Documentation and display  
 * [Markdown basics](DocumentationAndDisplay/Markdown_basics.txt)  
-* Jupyter notebook basics : [Notebook](DocumentationAndDisplay/Jupyter_commands.ipynb), [Markdown](DocumentationAndDisplay/Jupyter_commands.ipynb)
+* Jupyter notebook basics : [Notebook](DocumentationAndDisplay/Jupyter_commands.ipynb), [Markdown](DocumentationAndDisplay/Jupyter_commands.md)
 
----
+
 
 ## Keyboard shortcuts
 
