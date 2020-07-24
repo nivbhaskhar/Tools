@@ -3,6 +3,7 @@
 
 #Checkpoints and buffer files
 .ipynb_checkpoints/*
+*/.ipnyb_checkpoints/*
 *~
 
 # Byte-compiled / optimized / DLL files
