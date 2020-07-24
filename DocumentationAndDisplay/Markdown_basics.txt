@@ -1,0 +1,31 @@
+Markdown
+--------
+
+1) Newline
+
+Hello (two white spaces)
+World
+
+--> Hello
+    World
+
+2) Image insertion
+
+![Image title](image_url)
+
+or
+
+<img src="image_url"/> 
+
+3) Headings
+
+# Heading
+## Smaller heading
+
+4) Lists
+
+* Item 1
+* Item 2
+
+
+

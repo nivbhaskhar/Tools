@@ -1,0 +1,104 @@
+2) Shell Tools and Scripting 
+
+Reference: https://missing.csail.mit.edu/2020/shell-tools/
+
+Command
+-- Terminal output
+** Description of what the command does/notes
+
+
+Assigning and accessing variables
+---------------------------------
+
+my_variable=2
+echo "$my_variable"
+
+-- 2
+
+** my_variable = 2 interpreted as run command my_variable with argument 2
+So don't have spaces while assigning variables!
+
+
+value=2
+my_variable=value
+echo "$my_variable"
+
+-- value
+
+** To access variable's value, use $...
+
+
+Defining and calling functions
+------------------------------
+
+my_function () {
+
+echo "$2"
+
+}
+
+
+my_function first_arg second_arg
+
+-- second_arg
+
+
+
+** $0 refers to name of script (?? in interactive mode, it is "-bash")
+** $1 refers to first argument of script/function
+** $i for 1<=i<=9 refers to i-th argument of script/function
+** $@ refers to all arguments of script/function
+** $# is number of arguments of script/function
+** $? refers to exit code of the previous command
+[Warning - if a command exits with code 1 in a terminal, it logs you out of terminal]
+[So this $? is useful only if you run the command as a script in the current terminal (so the actual command runs in a different terminal) and then call $? in the current terminal to get exit code of the script run just before]
+** !! is entire last command including arguments
+** $_ is last argument of last command (Esc . also yields same if in interactive mode)
+
+
+Output, errors, return codes
+---------------------------
+
+STDOUT - common way for functions to return outputs
+STDERR - common way for functions to return errors
+Return/Exit Code - report errors which are more parseable by script
+
+Exit Code = 0 if all OK, else non-zero
+true : Exit Code 0
+false: Exit Code 1
+
+command  > output.txt 2> stderr.ext 
+---writed STDOUT to output.txt and STDERR to stderr.txt
+
+$? 
+--returns exit code of previous command
+
+OR and AND
+-----------
+command 1 || command 2
+
+command 1 exit code |  (Command 1 || Command 2)
+0                      Command 2 will not execute
+1                      Command 2 will execute 
+
+
+Similarly for command 1 &&  command 2
+
+Command and process substitution
+--------------------------------
+
+$(command)
+-- executes command and substitutes output in place
+
+foo=$(ls)
+-- puts output of ls in foo variable
+
+<(command)
+--executes command and puts output in temp file and substitutes <() with that temp file name
+
+cat <(ls)
+-- equivalent to ls >tmp.txt; cat tmp.txt
+
+
+
+
