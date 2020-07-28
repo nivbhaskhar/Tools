@@ -10,8 +10,8 @@
 
 
 ## Visualization
-* Matplotlib basics
-  - Pylab interface : [Notebook](Visualization/1_MPL_pylab_basic.ipynb), [Markdown](Visualization/1_MPL_pylab_basic.md)
+* Pylab interface : [Notebook](Visualization/1_MPL_pylab_basic.ipynb), [Markdown](Visualization/1_MPL_pylab_basic.md)
+* Plotting simple vectors using arrows : [Notebook](Visualization/MPL_arrows_plot.ipynb), [Markdown](Visualization/MPL_arrows_plot.md)
 
 
 
