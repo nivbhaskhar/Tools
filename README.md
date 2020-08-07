@@ -7,6 +7,8 @@
 * Creating Pandas objects and accessing data from them : [Notebook](Pandas/Pandas_basic_1.ipynb), [Markdown](Pandas/Pandas_basic_1.md)
 
 
+## scikit-learn
+* TF-IDF : [Notebook](scikit-learn/tf-idf_scikitlearn.ipynb), [Markdown](scikit-learn/tf-idf_scikitlearn.md)
 
 
 ## Visualization
