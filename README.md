@@ -9,6 +9,7 @@
 
 ## scikit-learn
 * TF-IDF : [Notebook](scikit-learn/tf-idf_scikitlearn.ipynb), [Markdown](scikit-learn/tf-idf_scikitlearn.md)
+* Decision tree regressor : [Notebook](scikit-learn/decision_tree_regressor.ipynb), [Markdown](scikit-learn/decision_tree_regressor.md)
 
 
 ## Visualization
