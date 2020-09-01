@@ -456,13 +456,6 @@ prettier_graph
 
 
 
-# Saving decision tree visualizations to an image file
-
-
-```python
-
-```
-
 # Predictions
 
 ## Individual data point predictions
