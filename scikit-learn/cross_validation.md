@@ -41,7 +41,7 @@ from sklearn.metrics import mean_squared_error
 
 
 from sklearn.model_selection import cross_val_score
-
+from sklearn.model_selection import cross_val_predict
 ```
 
 # Weather data from before
@@ -193,7 +193,7 @@ scores.mean()
 
 
 
-    -3.430898932367799
+    -3.430898932367797
 
 
 
@@ -205,7 +205,7 @@ scores.std()
 
 
 
-    0.40460168118423967
+    0.40460168118423745
 
 
 
@@ -214,6 +214,46 @@ scores.std()
 The mean squared error on our test-data set from earlier was 3.13. (We reported the root-mean square error to be around 1.77). We see that the average cross validation score is -3.43, or the average mean-square error of test-datasets across the k=5 folds is 3.43.
 
 The cross-validation error gives a much better estimate of the error, as it uses every element in the dataset as a test-input (exactly once in some fold). 
+
+# Predictions
+
+The syntax for cross validation predictions over k folds is 
+
+
+```cross_val_predict(model, features, labels, cv=k)```
+
+Note that every input datapoint is part of exactly 1 test-data set in exactly one fold. cross_val_predict returns this prediction for every input datapoint when it was part of the test-dataset. 
+
+
+
+```python
+predictions = cross_val_predict(tree_reg, weather_features, precipitation_labels, cv=5)
+```
+
+
+```python
+predictions.shape
+```
+
+
+
+
+    (1866,)
+
+
+
+
+```python
+predictions[:10]
+```
+
+
+
+
+    array([16.495     , 17.51790123, 16.495     , 17.51790123, 17.51790123,
+           17.51790123, 17.51790123, 16.495     , 16.495     , 17.51790123])
+
+
 
 
 ```python
