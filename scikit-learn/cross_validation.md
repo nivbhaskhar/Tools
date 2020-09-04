@@ -1,4 +1,4 @@
-# Cross validation using scikit-learn
+# k-fold cross validation using scikit-learn
 
 Recall that we predicted precipitation from other weather features using a [Decision Tree regressor](https://github.com/nivbhaskhar/Tools/blob/master/scikit-learn/decision_tree_regressor.md). There, we split up the input data into training and test data sets. This meant that the test data set was never used in training at all. In this notebook, we'll use cross validation to more efficiently use the input data for both training and testing.
 
