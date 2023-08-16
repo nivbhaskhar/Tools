@@ -1,13 +1,13 @@
 # Install pipenv for mac
 
 1. First install brew
-Links: 
-- https://mac.install.guide/homebrew/3.html
-- https://brew.sh/
+
+  Links: 
+  - https://mac.install.guide/homebrew/3.html
+  - https://brew.sh/
 
 2. Then install pipenv
-
-`brew install pipenv # this automatically installs python 3.11`
+   `brew install pipenv # this automatically installs python 3.11`
 
 # Using pipenv
 
