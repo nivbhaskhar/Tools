@@ -41,7 +41,7 @@ pipenv run jupyter notebook
 
 Note: to quit environment, Ctrl + D
 
-### 3. Uninstalling and reinstalling virtual environment
+## 3. Uninstalling and reinstalling virtual environment
 ```
 pipenv uninstall package # uninstalls package and dependencies
 pipenv —rm # removes the pipenv environment
