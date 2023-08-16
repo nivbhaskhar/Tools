@@ -48,4 +48,8 @@ pipenv —rm # removes the pipenv environment
 pipenv install # to reinstall the env
 ```
 
+# Notes
+1. If you do `which python` while in virtual environment, it will give `/Users/../.local/share/virtualenvs/datascience-.../bin/python` while when not in virtual environment, it might be `/usr/local/bin/python` etc
+2. pipenv does this by modifying `$PATH` by prepending `/Users/../.local/share/virtualenvs/../bin` when virtual environment is activated within the directory. So we access the `python` and packages located here first
+
 
