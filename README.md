@@ -42,3 +42,4 @@
 
 * [Bash](Shortcuts/Bash_keyboard_shortcuts.txt)
 * Jupyter notebook: [Notebook](Shortcuts/Jupyter_keyboard_shortcuts.ipynb), [Markdown](Shortcuts/Jupyter_keyboard_shortcuts.md)
+* [VSCode](Shortcuts/vscode_keyboard_shortcuts.txt)

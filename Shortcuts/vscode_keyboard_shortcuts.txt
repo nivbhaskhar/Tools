@@ -1,0 +1,4 @@
+Mac shortcuts for vscode:
+
+
+Comment/uncomment a block of code : select code lines, command + /
